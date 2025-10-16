@@ -19,8 +19,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
-cat_col = [1,2,3]
-num_col = [0,4]
+cat_col = [1, 2, 3]
+num_col = [0, 4]
 
 transform = ColumnTransformer(
     [
@@ -68,6 +68,5 @@ import skops.io as sio
 
 pipe = sio.load(
     "Model/drug_pipeline.skops",
-    trusted=sio.get_untrusted_types(file="Model/drug_pipeline.skops")
+    trusted=sio.get_untrusted_types(file="Model/drug_pipeline.skops"),
 )
-
