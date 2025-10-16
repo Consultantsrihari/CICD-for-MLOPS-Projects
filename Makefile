@@ -5,7 +5,7 @@ install:
 	pip install -r requirements.txt
 
 format:
-	python -m black .
+	/usr/bin/env python3 -m black .
 
 train:
 	python train.py
