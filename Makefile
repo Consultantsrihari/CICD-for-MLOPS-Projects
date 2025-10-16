@@ -6,7 +6,7 @@ install:
     pip install black
 
 format:
-	/usr/bin/env python3 -m black .
+	python -m black .
 
 train:
 	python train.py
