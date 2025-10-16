@@ -3,6 +3,7 @@
 install:
 	pip install --upgrade pip
 	pip install -r requirements.txt
+    pip install black
 
 format:
 	/usr/bin/env python3 -m black .
