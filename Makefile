@@ -1,6 +1,9 @@
 install:
 	@pip install --upgrade pip && \
-	pip install -r requirements.txt
+	pip install -r src/requirements.txt && \
+	pip install -r src/requirements**
+
+
 
 format:
 	@black *.py
@@ -14,3 +17,4 @@ eval:
 	@echo "\n## Confusion Matrix Plot" >> report.md
 	@echo "![Confusion Matrix](./Results/model_results.png)" >> report.md
 	@cml comment create report.md
+
