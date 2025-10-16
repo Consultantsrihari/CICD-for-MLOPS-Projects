@@ -3,7 +3,7 @@ install:
 	pip install -r requirements.txt
 
 format:
-	/usr/bin/env python3 -m black .
+	python -m black .
 
 train:
     python train.py
@@ -16,3 +16,6 @@ eval:
     echo '![Confusion Matrix](./Results/model_results.png)' >> report.md
    
     cml comment create report.md
+    
+    echo "\n## Confusion Matrix Plot" >> report.md
+    echo "![Confusion Matrix](./Results/model_results.png)" >> report.md
